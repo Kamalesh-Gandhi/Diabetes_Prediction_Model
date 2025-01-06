@@ -4,7 +4,7 @@ import joblib
 # Load the trained model
 model = joblib.load('Diabetes_Prediction_Model.pkl')
 
-# Set the page configuration for a professional look
+# Set the page configuration
 st.set_page_config(
     page_title="Diabetes Prediction Site",
     page_icon="🩺",
@@ -29,18 +29,24 @@ st.markdown(
 # Create a form layout for user inputs
 with st.form("diabetes_form"):
     st.subheader("Enter Your Details")
-    # Input fields
-    gender = st.selectbox("Gender", ["Female", "Male"])
-    age = st.number_input("Age", min_value=0, max_value=120, step=1)
-    hypertension = st.selectbox("Do you have Hypertension?", ["No", "Yes"])
-    heart_disease = st.selectbox("Do you have Heart Disease?", ["No", "Yes"])
-    smoking_history = st.selectbox(
-        "Smoking History",
-        ["Never Smoked", "Former Smoker", "Current Smoker", "Occasional", "Unknown"]
-    )
-    bmi = st.number_input("Enter your BMI (e.g., 25.4)", format="%.1f")
-    HbA1c_level = st.number_input("Enter your HbA1c Level (e.g., 6.5)", format="%.1f")
-    blood_glucose_level = st.number_input("Enter your Blood Glucose Level (e.g., 120)", step=1)
+    
+    # Input fields in two columns
+    col1, col2 = st.columns(2)
+
+    with col1:
+        gender = st.selectbox("Gender", ["Female", "Male"])
+        age = st.number_input("Age", min_value=0, max_value=120, step=1)
+        hypertension = st.selectbox("Do you have Hypertension?", ["No", "Yes"])
+        heart_disease = st.selectbox("Do you have Heart Disease?", ["No", "Yes"])
+
+    with col2:
+        smoking_history = st.selectbox(
+            "Smoking History",
+            ["Never Smoked", "Former Smoker", "Current Smoker", "Occasional", "Unknown"]
+        )
+        bmi = st.number_input("Enter your BMI (e.g., 25.4)", format="%.1f")
+        HbA1c_level = st.number_input("Enter your HbA1c Level (e.g., 6.5)", format="%.1f")
+        blood_glucose_level = st.number_input("Enter your Blood Glucose Level (e.g., 120)", step=1)
 
     # Submit button
     submitted = st.form_submit_button("Predict")
@@ -88,7 +94,7 @@ if submitted:
                 </div>
                 """,
                 unsafe_allow_html=True,
-            )
+            ) 
         else:
             st.markdown(
                 f"""
