@@ -85,6 +85,31 @@ The dataset includes health-related features such as BMI, blood glucose level, H
 
 ---
 
+## Model Evaluation
+
+- **Pre-Tuning Score**: Initial performance metrics of the GradientBoost model.
+- **Post-Tuning Score**: Improved performance after hyperparameter tuning.
+
+| Metric              | Before Tuning      | After Tuning |
+|---------------------|--------------------|--------------|
+| Accuracy            | 0.970947           | 0.9710165    |
+| F1 Score            | 0.799041           | 0.8939322    |
+
+---
+
+## Streamlit UI
+
+The web application provides a seamless experience for users. Below are sample screenshots:
+
+1. **Before Prediction**  
+   ![StreamUI Before Prediction](https://github.com/user-attachments/assets/7232ea79-1db2-49a6-bb3f-63b58fdd8fcd)
+
+2. **After Prediction**  
+   ![StreamUI After Prediction](https://github.com/user-attachments/assets/1233e4e3-b5d4-4bd4-99ae-183f76c7e3ca)
+
+
+---
+
 ## Installation
 
 Follow these steps to set up the environment:
