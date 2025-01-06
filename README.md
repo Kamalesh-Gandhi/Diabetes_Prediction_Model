@@ -1,15 +1,15 @@
 # Diabetes Prediction Project
 
 ## Table of Contents
-1. [Project Overview]
-2. [Dataset Information]
-3. [Tools and Technologies]
-4. [Project Workflow]
-5. [Data Cleaning and Preprocessing]
-6. [Installation]
-7. [How to Run the Project]
-8. [Results]  
-9. [Acknowledgments]
+1. [Project Overview](#project-overview)
+2. [Dataset Information](#dataset-information)
+3. [Tools and Technologies](#tools-and-technologies)
+4. [Project Workflow](#project-workflow)
+5. [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+6. [Model Evaluation](#model-evaluation)
+7. [Streamlit UI](#streamlit-ui)
+8. [Deployment on AWS EC2](#deployment-on-aws-ec2)
+9. [Installation](#installation)
 
 ---
 
@@ -108,6 +108,33 @@ The web application provides a seamless experience for users. Below are sample s
    ![StreamUI After Prediction](https://github.com/user-attachments/assets/1233e4e3-b5d4-4bd4-99ae-183f76c7e3ca)
 
 
+---
+
+## Deployment on AWS EC2
+
+The project is deployed on an AWS EC2 instance to ensure reliability, scalability, and accessibility. Users can interact with the web application through a public URL, accessing the prediction tool from anywhere without local setup. 
+
+**Key benefits of AWS EC2 deployment:**
+1. Scalable infrastructure to handle user requests efficiently.
+2. Secure and reliable hosting for the application.
+3. Easy accessibility via the internet.
+
+**Steps for deployment:**
+1. Set up an AWS EC2 instance with the required specifications.
+2. Install the necessary libraries and dependencies on the instance.
+3. Deploy the Streamlit application and configure it for public access.
+
+### AWS EC2 Screenshots
+
+1. **Deployed Streamlit UI on AWS EC2**
+   
+   ![image](https://github.com/user-attachments/assets/535d3064-712a-4e80-ad5e-9dd0ed9be063)
+
+   ![image](https://github.com/user-attachments/assets/015ce9b1-c22b-4613-9d09-007aca64bf36)
+
+   ![image](https://github.com/user-attachments/assets/7da6f9e9-4f9f-4493-82c7-c336ac260e13)
+
+   
 ---
 
 ## Installation
